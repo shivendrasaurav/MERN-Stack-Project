@@ -1,0 +1,22 @@
+header, footer{
+    background: linear-gradient(45deg, #CC2936, purple);
+    color: #FFF;
+}
+footer a{color: #FFF;}
+@media (max-width: 640px){
+    .small0{display: none;}
+}
+.primary_light{
+    background: linear-gradient(45deg, #CC2936, #990099);
+    color: #fff;
+}
+.right{
+    float: right;
+}
+.center{
+    display: block;
+    margin: auto;
+}
+.oval{
+    border-radius: 90px;
+}
