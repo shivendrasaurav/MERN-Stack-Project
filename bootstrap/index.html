@@ -16,6 +16,91 @@
 </head>
 
 <body>
+    <div class="modal_container" id="mod1" onclick="closemod1();">
+        <!-- Modal content-->
+        <div class="modal-content col-10 col-lg-6 offset-1 offset-lg-3" style="margin-top: 10%;">
+            <div class="modal-header">
+                <h3 class="card-header primary_light text-white col-12 col-lg-12">Sign In<button type="button" style="color: #fff;" class="close" onclick="closemod1();">&times;</button></h3><br><br>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label class="sr-only" for="exampleInputPassword3">Password</label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                        </div>
+                        <div class="col-sm-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="button" class="btn btn-secondary btn-sm ml-auto" onclick="closemod1();">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+
+<div class="modal_container" id="mod2">
+    <!-- Modal content-->
+        <div class="modal-content col-10 col-lg-6 offset-1 offset-lg-3" style="margin-top: 10%">
+            <div class="modal-body">
+                <form class="card" id="form1">
+                    <h3 class="card-header primary_light text-white">Reserve a Table<button type="button" style="color: #fff;" class="close" onclick="closemod2();">&times;</button></h3><br><br>
+                    <div class="form-group row">
+                        <div class="col-md-6 offset-md-2 offset-1">
+                            <div class="form-radio">
+                                <label class="form-check-label" for="approve">
+                                    <strong>No of Guests</strong>
+                                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">1&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">2&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">3&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">4&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">5&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">6&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="telnum" class="col-12 col-md-2 col-form-label offset-md-2 offset-1"><strong>Date and Time</strong></label>
+                        <div class="col-4 col-md-3">
+                            <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Date">
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Time">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                            <label class="form-check-label col-4 col-lg-3 offset-1 offset-md-2"><strong>Section</strong></label>
+                            <div class="btn-group btn-group-toggle col-4 col-lg-4" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Non Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                  <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                </label>
+                            </div>
+                    </div><br>
+                    <div class="form-group row">
+                        <button class="btn btn-secondary col-3 offset-md-2 offset-1 col-lg-3" onclick="closemod2();">Cancel</button>
+                        <button class="btn btn-primary col-3 offset-1 col-lg-3">Reserve</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+
+<div id="body">
 
     <nav class="navbar navbar-dark navbar-expand-sm primary_light sticky-top">
         <div class="container">
@@ -29,6 +114,10 @@
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <span class="navbar-text">
+                        <button style="background: transparent; color: #fff; border: none;" onclick="showmodal1();">
+                        <span class="fa fa-sign-in"></span> Login</button>
+                    </span>
                 </ul>            
             </div>
         </div>
@@ -43,7 +132,9 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
-                    <a href="#form1"><button class="btn btn-lg btn-warning">Reserve Table</button></a>
+                    <a data-toggle="modal" class="btn btn-warning btn-lg" onclick="showmodal2();">
+                        Reserve Table
+                    </a>                    
                 </div>
             </div>
         </div>
@@ -57,6 +148,63 @@
             </div>
         </div>
 
+        <br><br>
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid"
+                                src="img/uthappizza.png" alt="Uthappizza">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
+                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                    Italian pizza, topped with Cerignola olives, ripe vine
+                                    cherry tomatoes, Vidalia onion, Guntur chillies and
+                                    Buffalo Paneer.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="img/buffet.png" alt="Uthappizza">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Weekend Grand Buffet <button class="btn btn-danger">NEW</button></h2>
+                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                    Italian pizza, topped with Cerignola olives, ripe vine
+                                    cherry tomatoes, Vidalia onion, Guntur chillies and
+                                    Buffalo Paneer.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="img/alberto.png" alt="Uthappizza">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                    International experience having worked closely with
+                                    whos-who in the culinary world, he specializes in
+                                    creating mouthwatering Indo-Italian fusion experiences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#mycarousel" data-slide-to="0"></li>
+                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                    <li data-target="#mycarousel" data-slide-to="2"></li>
+                </ol>
+                <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+             </div>
+        </div>
         <br><br>
         <div class="row">
             <div class="col-12 col-lg-10 col-md-10">
@@ -113,7 +261,7 @@
                         International experience having worked closely with
                         whos-who in the culinary world, he specializes in
                         creating mouthwatering Indo-Italian fusion experiences.
-                        </p>
+                    </p>
                 </div>
             </div>
             </div>
@@ -124,40 +272,6 @@
             </div>
         </div>
         <br><br><hr><br><br>
-
-        <div class="row">
-            <div class="col-12 col-lg-8 col-md-8 center">
-                <form class="card" id="form1">
-                    <h3 class="card-header primary_light text-white">Reserve a Table</h3><br><br>
-                    <div class="form-group row">
-                        <div class="col-md-6 offset-md-2 offset-1">
-                            <div class="form-radio">
-                                <label class="form-check-label" for="approve">
-                                    <strong>No of Guests</strong>
-                                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">1&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">2&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">3&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">4&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">5&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" class="form-check-input" name="approve" id="approve" value="">6&nbsp;&nbsp;&nbsp;&nbsp;
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label offset-md-2 offset-1">Date and Time</label>
-                        <div class="col-4 col-md-3 offset-1">
-                            <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Date">
-                        </div>
-                        <div class="col-4 col-md-3">
-                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Time">
-                        </div>
-                    </div>
-                        <button class="btn btn-primary col-4 offset-md-2 offset-1">Reserve</button>
-                    <br><br>
-                </form>
-            </div>
-        </div>
 
     </div>
     <br><br>
@@ -204,6 +318,33 @@
         </div>
     </footer>
     
+</div>
 </body>
+
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    function showmodal1(){
+        document.getElementById("mod1").style.display="block";
+        document.getElementById("body").style.filter="blur(10px)";
+    }
+
+    function showmodal2(){
+        document.getElementById("mod2").style.display="block";
+        document.getElementById("body").style.filter="blur(10px)";
+    }
+
+    function closemod1(){
+        document.getElementById("mod1").style.display="none";
+        document.getElementById("body").style.filter="blur(0px)";
+    }
+
+    function closemod2(){
+        document.getElementById("mod2").style.display="none";
+        document.getElementById("body").style.filter="blur(0px)";
+    }
+</script>
 
 </html>
