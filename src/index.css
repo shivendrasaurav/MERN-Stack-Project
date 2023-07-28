@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter';
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #fafadd;
+    background: url('./assets/bg_inv.png');
+    background-attachment: fixed;
+    background-position: center;
+  }
+  a:hover {
+    color: #06a5ad;
+  }
+  button {
+    background-color: #006a5a;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #0e0e0e;
+    background: radial-gradient(circle at bottom left, blue, transparent),
+    radial-gradient(circle at bottom right, green, transparent),
+    radial-gradient(circle at top right, red, transparent),
+    radial-gradient(circle at top left, white, transparent);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

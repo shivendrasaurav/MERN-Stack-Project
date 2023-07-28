@@ -1,0 +1,249 @@
+.lander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+}
+.lander:hover .circle {
+  transform: scale(1.1);
+  border: 4px solid #44ffff;
+}
+.lander:hover .square {
+  transform: scale(1.1);
+}
+.lander:hover .post {
+  transform: translateX(2rem);
+}
+.lander:hover .pre {
+  transform: translateX(-2rem);
+}
+.lander .pre {
+  text-align: right;
+}
+.lander .circle {
+  width: 360px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #00ffff;
+  border-radius: 50%;
+  transition: 160ms;
+  background: #000000;
+}
+.lander .square {
+  width: 360px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 160ms;
+}
+.lander .subheading {
+  font-size: 2.2rem;
+  font-family: "Montserrat";
+  line-height: 1;
+}
+.lander .title {
+  font-size: 4.8rem;
+  font-family: "Montserrat";
+  line-height: 1;
+}
+.lander .heading {
+  font-size: 2.8rem;
+}
+.lander .heading span {
+  font-family: "Poiret One";
+  margin: 0px 6px;
+}
+
+.scrollIndicator {
+  font-size: 3.2rem;
+  display: block;
+  position: relative;
+  top: -8vh;
+}
+.scrollIndicator .deg90 {
+  display: block;
+  font-family: monospace;
+  width: 24px;
+  margin: auto;
+  transform: rotate(90deg);
+  line-height: 0.5;
+}
+.scrollIndicator .deg90:nth-child(1) {
+  color: #00aaaa;
+}
+.scrollIndicator .deg90:nth-child(2) {
+  color: #22dddd;
+}
+.scrollIndicator .deg90:nth-child(3) {
+  color: #44ffff;
+}
+.scrollIndicator .deg90:hover {
+  transform: scale(1.2) rotate(90deg);
+}
+
+.demo {
+  display: block;
+  margin: auto;
+  margin-top: 18vh;
+  height: 90vh;
+  width: 80%;
+}
+.demo h1 {
+  font-family: "Montserrat";
+  font-size: 3.2rem;
+}
+.demo .codeView {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 80%;
+  flex-direction: row;
+}
+.demo .codeView .editor {
+  width: 65%;
+  height: 100%;
+  resize: none;
+}
+.demo .codeView .output {
+  width: 30%;
+  height: 100%;
+}
+
+.pricing {
+  margin: auto;
+  margin-top: 18vh;
+  align-items: center;
+  margin-bottom: 10vh;
+  width: 80%;
+}
+.pricing h1 {
+  font-family: "Montserrat";
+  font-size: 3.2rem;
+}
+.pricing .pricingCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pricing .card {
+  height: 40vh;
+  width: 30%;
+  box-shadow: 3px 6px 6px #0e0e2e, -3px -2px #0e0e1e;
+  padding: 16px 32px;
+  border-radius: 6px;
+  background-color: #0a0a1e;
+  margin: 16px 32px;
+}
+.pricing .card:hover .cardContent {
+  transform: scale(1.05) translate(2vh, 1vh);
+}
+.pricing .card:hover.bestSeller .cardContent {
+  transform: scale(1.1) translate(5vh, 1.8vh);
+}
+.pricing .card.bestSeller {
+  background-color: #000000;
+  box-shadow: 3px 6px 6px #1e1e2e, -3px -2px 6px #1e1e1e;
+  height: 50vh;
+  transition: 1s;
+}
+.pricing .card .cardContent {
+  overflow: hidden;
+  transition: 3s;
+}
+.pricing .card .title {
+  font-size: 2.4rem;
+  font-family: "Montserrat";
+}
+.pricing .card .price {
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.pricing .card .features {
+  list-style-type: "-";
+}
+.pricing .card .features * {
+  font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.subscribe {
+  margin: auto;
+  margin-top: 18vh;
+  align-items: center;
+  margin-bottom: 10vh;
+  width: 80%;
+  background-color: #0065ac;
+  border-radius: 10px;
+  padding-top: 4vh;
+  padding-bottom: 2vh;
+}
+.subscribe h1 {
+  font-family: "Montserrat";
+  font-size: 3.2rem;
+}
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe form input {
+  width: 60%;
+  background-color: transparent;
+  text-align: center;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  border: 2px solid rgba(250, 250, 250, 0.6666666667);
+  color: #fafada;
+}
+.subscribe form input:hover, .subscribe form input:focus {
+  border: 2px solid #fafafa;
+}
+.subscribe form button {
+  background-color: rgba(250, 250, 250, 0.6666666667);
+  width: 20%;
+  font-weight: bold;
+}
+.subscribe form button:hover, .subscribe form button:active {
+  background-color: #fafada;
+}
+
+.highlights {
+  height: 60vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.highlights .card {
+  width: 30%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 8px 8px #000, -2px -6px 8px #111;
+  padding: 0 36px;
+  border-radius: 6px;
+  transform: translateY(50px);
+  transition: 150ms;
+}
+.highlights .card:hover {
+  transform: translateY(0px);
+}
+.highlights .card .title {
+  font-size: 2rem;
+  font-family: "Poiret One";
+}
+.highlights .card .description {
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+  text-align: center;
+}/*# sourceMappingURL=App.css.map */
