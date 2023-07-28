@@ -150,9 +150,9 @@ function App() {
 
       <div className='subscribe'>
         <h1 className='ta_center'>Coming Soon</h1>
-        <form onSubmit={(e) => e.preventDefault}>
-          <input type='email' placeholder='your email address' />
-          <button>subscribe to get updates</button>
+        <form action='https://submit-form.com/QlHJV2i7'>
+          <input type='email' name='email' id='email' placeholder='your email address' />
+          <button type='submit'>subscribe to get updates</button>
         </form>
       </div>
     </>
