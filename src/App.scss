@@ -3,7 +3,8 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
-    width: 100%;
+    width: 90%;
+    margin: auto;
 
 
     &:hover{
@@ -25,8 +26,8 @@
         text-align: right;
     }
     .circle{
-        width: 360px;
-        height: 360px;
+        width: 40vh;
+        height: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,8 +38,8 @@
         background: #000000;
     }
     .square{
-        width: 360px;
-        height: 360px;
+        width: 40vh;
+        height: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,12 +47,12 @@
         transition: 160ms;
     }
     .subheading{
-        font-size: 2.2rem;
+        font-size: 2.2vw;
         font-family: 'Montserrat';
         line-height: 1;
     }
     .title{
-        font-size: 4.8rem;
+        font-size: 4.8vw;
         font-family: 'Montserrat';
         line-height: 1;
     }
@@ -95,7 +96,7 @@
 .demo{
     display: block;
     margin: auto;
-    margin-top: 18vh;
+    margin-top: 60vh;
     height: 90vh;
     width: 80%;
 
@@ -138,11 +139,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .card{
         height: 40vh;
-        width: 30%;
+        aspect-ratio: 3/4;
         box-shadow: 3px 6px 6px #0e0e2e, -3px -2px #0e0e1e;
         padding: 16px 32px;
         border-radius: 6px;
@@ -210,7 +212,7 @@
         align-items: center;
 
         input{
-            width: 60%;
+            width: 360px;
             background-color: transparent;
             text-align: center;
             margin-top: 4vh;
@@ -224,7 +226,7 @@
         }
         button{
             background-color: #fafafaaa;
-            width: 20%;
+            width: 200px;
             font-weight: bold;
 
             &:hover, &:active{
@@ -244,9 +246,11 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    padding-top: 30vh;
 
     .card{
-        width: 30%;
+        height: 40vh;
         aspect-ratio: 1;
         display: flex;
         flex-direction: column;
